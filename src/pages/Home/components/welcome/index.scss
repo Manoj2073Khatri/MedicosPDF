@@ -1,0 +1,123 @@
+@import "../../../../App.scss";
+
+.home-page-welcome-wrapper {
+    // @include flexRowSbCenter;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    padding: 0px 35px;
+    margin-bottom: 10vh;
+    // background-color: red;
+    &-content {
+        // @include flexColSbStart;
+        // background-color: yellow;
+        width: 50%;
+         &-head{
+             text-align: center;
+             h2{
+               color: #333333;
+             }
+         }
+        .paragraph {
+            margin: 55px 0px;
+            text-align: center;
+        }
+
+        
+    }
+    .background-image{
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 92%, 50% 100%, 0 92%);
+        background-blend-mode: overlay;
+        background-color: rgba(255,255,255,.1);
+       
+    }
+    &-downArrow{
+        position: absolute;
+        top: 570px;
+        left: 47%;
+        height: 60px;
+        width: 60px;
+        background-color: $--primary;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        @include mobile{
+            left: 45%;
+        }
+        &-icon{
+           color: #fff;
+           margin-top: 10px;
+           transition: .25s;
+        }
+        &:hover{
+            background-color: #333;
+            .home-page-welcome-wrapper-downArrow-icon{
+                transform: translateY(10px);
+                transition: .25s;
+            }
+        }
+    }
+
+    .illustration {
+        // background-color: green;
+        width: 100%;
+        max-width: 668px;
+    }
+}
+
+@include tablet {
+    .home-page-welcome-wrapper {
+        padding: 0px 15px;
+
+        &-content {
+            width: 80%;
+
+            .paragraph {
+                margin: 25px 0px;
+            }
+
+            // margin-right: 25px;
+        }
+
+        .illustration {
+            width: 100%;
+            max-width: 668px;
+        }
+    }
+}
+
+
+
+@include mobile {
+    .home-page-welcome-wrapper {
+        @include flexColCenter;
+        flex-direction: column-reverse;
+        padding: 0px 15px;
+
+        &-content {
+            width: 100%;
+
+            .paragraph {
+                margin: 25px 0px;
+            }
+
+            // margin-right: 25px;
+        }
+
+        .illustration {
+            width: 100%;
+            max-width: 668px;
+        }
+    }
+}

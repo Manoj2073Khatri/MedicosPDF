@@ -1,0 +1,15 @@
+.journal-wrapper{
+    width: 100%;
+    .progressBarContainer{
+        height: 5px;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        z-index: 10;
+        &-increment{
+           background-color: #e61e61;
+           height: 100%;
+        
+        }
+    }
+}

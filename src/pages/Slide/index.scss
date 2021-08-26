@@ -1,0 +1,157 @@
+@import "../../App.scss";
+
+.slide-page-container {
+    height: 100%;
+    width: 100%;
+
+    &-wrapper {
+
+        
+        .slide-page-slide-section {
+            @include flexRowSbStart;
+            width: 100%;
+            height: 1000px;
+            &-col1 {
+                @include flexColStartCenter;
+                padding: 35px 0px 0px 25px;
+                text-align: center;
+                width: 30%;
+                height: 100%;
+                .heading {
+                    text-align: left;
+                    width: 100%;
+                }
+                .sub-heading {
+                    align-self: flex-start;
+                    text-align: left;
+                    margin-left: 25px;
+                    border-bottom: 1.9px solid $--primary;
+                }
+                .sub-categories{
+                    width: 80%;
+                }
+            }
+
+            &-col2 {
+                @include flexColCenterStart;
+                padding-top: 35px;
+                width: 100%;
+                height: 100%;
+                border-left: 0.1px solid #f7f7f7;
+                
+
+                &-content-section {
+                    @include flexRowSbCenter;
+                    align-self: center;
+                    text-align: center;
+                    width: 95%;
+                    height: 846px;
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    padding: 10px;
+                }
+
+                .tabs {
+                    width: 100%;
+                }
+
+                .pagination {
+                    @include flexRowEndCenter;
+                    width: 100%;
+                    border-top: 1px solid #f7f7f7;
+                }
+            }
+        }
+
+    }
+
+
+    // display: flex;
+}
+
+@include tablet {
+    .book-detail-page {
+        height: 100%;
+        width: 100%;
+
+        &-wrapper {
+
+            // background-color: red;
+            &-book-detail-section {
+                &-container {
+                    width: 100%;
+
+                    img {
+                        width: 250px;
+                        margin-right: 25px
+                    }
+                }
+
+            }
+
+            &-book-explore-section {
+                @include flexColCenter;
+                // background-color: green;
+                width: 100%;
+
+                .book-review-section {
+                    width: 100%;
+                }
+
+                .related-book-section {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+@include mobile {
+    .book-detail-page {
+        height: 100%;
+        width: 100%;
+
+        &-wrapper {
+
+            // background-color: red;
+            &-book-detail-section {
+                @include flexColCenter;
+
+                &-container {
+                    @include flexColCenter;
+                    // background-color: red;
+                    width: 100%;
+
+                    // padding: 0px;
+                    img {
+                        width: 250px;
+                        margin: 0px;
+                    }
+
+                    &-content {
+                        width: 90%;
+                        // background-color: white;
+                        margin-top: 35px
+                    }
+                }
+
+            }
+
+            &-book-explore-section {
+                @include flexColCenter;
+                // background-color: green;
+                width: 100%;
+
+                .book-review-section {
+                    width: 100%;
+                }
+
+                .related-book-section {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,112 @@
+@import "../../../App.scss";
+
+
+.blogCard-container {
+    @include flexRowCenter;
+    padding: 15px 0px;
+    &-wrapper {
+        background: linear-gradient(35deg,#fb6340,#fbb140) !important;
+        height: 100%;
+        border-radius: 5px;
+        width: 350px;
+        box-shadow: 5px 5px 19px rgba(128, 128, 128, 0.3);
+
+        &-topic {
+            @include flexRowStartEnd;
+            padding: 0px 25px;
+            margin-top: 19px;
+            color: #ffffff;
+
+            .icon {
+                margin: 0px 5px 0px 0px;
+            }
+
+            p {
+                color: #ffffff;
+            }
+        }
+
+        &-content {
+            margin-bottom: 39px;
+            padding: 0px 25px;
+
+            h5 {
+                margin: 10px 0px;
+                color: white;
+                font-weight: lighter;
+                font-weight: 18px;
+            }
+
+            p {
+                color: white;
+                font-weight: lighter;
+                line-height: 30px;
+                font-size: 22px;
+            }
+        }
+
+        &-picture {
+            width: 100%;
+            height: 200px;
+        }
+
+        &-footer {
+            @include flexRowSbCenter;
+            // background-color: red;
+            height: 70px;
+            // border-top: 1px solid #eeeeee;
+            width: 100%;
+            padding: 0px 25px;
+
+            &-user-info {
+                @include flexRowCenter;
+
+                &-picture {
+                    height: 35px;
+                    margin-right: 10px;
+                }
+
+                &-text {
+                    p {
+                        color: white
+                    }
+
+                }
+            }
+
+            &-button-container {
+                @include flexRowCenter;
+                color: white;
+
+                .heart {
+                    @include flexRowCenter;
+
+                    p {
+                        color: white;
+                    }
+
+                    .icon {
+                        margin-right: 5px;
+                    }
+                }
+
+                .bag {
+                    @include flexRowCenter;
+                    color: white;
+
+                    p {
+                        color: white;
+                    }
+
+                    .icon {
+                        margin-right: 5px;
+                    }
+
+                    margin-left: 15px;
+                }
+            }
+        }
+
+    }
+
+}

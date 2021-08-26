@@ -1,0 +1,78 @@
+@import "../../App.scss";
+
+.book-page {
+    height: 100%;
+    width: 100%;  
+
+    &-book-section {
+        @include flexRowSbStart;
+        width: 100%;
+        
+        &-col1 {
+            @include flexColStartCenter;
+            // background-color: red;
+            padding: 35px 25px 0px 25px;
+            // display: flex;
+            text-align: center;
+            width: 35%;
+            height: 100%;
+            .heading {
+                text-align: left;
+                width: 100%;
+                // margin-left: 30px;
+                // background-color: red
+            }
+            .sub-heading {
+                align-self: flex-start;
+                text-align: left;
+                margin-left: 25px;
+                border-bottom: 1.9px solid $--primary;
+                // margin-left: 30px;
+                // background-color: red
+            }
+            .sub-categories{
+                // background-color: green;
+                width: 80%
+            }
+        }
+
+        &-col2 {
+            @include flexColCenterStart;
+            padding-top: 35px;
+            width: 75%;
+            height: 100%;
+            border-left: 0.1px solid #f7f7f7;
+            // background-color: yellow;
+            
+
+            &-content-section {
+                @include flexRowSbCenter;
+                align-self: center;
+                display: grid;
+                text-align: center;
+                width: 90%;
+                grid-template-columns: auto auto auto;
+                padding: 10px;
+                .item{
+                    margin-bottom: 30px;
+                }
+                // background-color: red;
+            }
+
+            .tabs {
+                // @include flexRowStartCenter;
+                // background-color: red;
+                width: 100%
+            }
+
+            .pagination {
+                @include flexRowEndCenter;
+                width: 100%;
+                border-top: 0.1px solid #f7f7f7;
+                // background-color: red;
+                // display: inline-grid;
+            }
+        }
+    }
+    // display: flex;
+}

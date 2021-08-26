@@ -1,0 +1,262 @@
+@import "../../../../App.scss";
+
+.slider-container {
+    @include flexColSbCenter;
+    width: 100%;
+    height: 92vh;
+    background-color: #212529;
+
+    &-top {
+        @include flexRowCenter;
+        background-color: #141414;
+        height: 70px;
+        width: 100%;
+    }
+
+    &-bottom {
+        @include flexRowCenter;
+        background-color: #141414;
+        height: 70px;
+        width: 100%;
+
+        h6 {
+            font-weight: bold;
+            // font-size: 1rem;
+            font-family: "Roboto", sans-serif;
+            color: white;
+        }
+
+        &-container {
+            @include flexRowSbCenter;
+            width: 65%;
+            // background-color: red;
+            height: 100%;
+
+            .left {
+                @include flexRowCenter;
+
+                p {
+                    font-weight: normal;
+                    font-family: "Roboto", sans-serif;
+                    color: white;
+                }
+
+                .userInfo:hover {
+                    cursor: pointer;
+                }
+
+                .userInfo {
+                    @include flexRowCenter;
+                    margin-right: 25px;
+
+                    .profilePic {
+                        width: 45px;
+                        margin-right: 15px;
+                    }
+
+
+                }
+            }
+
+            .right {
+                @include flexRowCenter;
+
+                .icon {
+                    font-size: 25px;
+                    color: white;
+                    margin-right: 5px
+                }
+
+                .downloadIcon {
+                    font-size: 25px;
+                    color: white;
+                    margin-right: 5px
+                }
+
+                .downloadIcon:hover {
+                    cursor: pointer;
+                }
+
+                .category:hover {
+                    cursor: pointer;
+                }
+
+                .category {
+                    @include flexRowCenter;
+                }
+
+                .star:hover {
+                    cursor: pointer;
+                }
+
+                .star {
+                    @include flexRowCenter;
+                    margin-left: 25px;
+                }
+
+                .view {
+                    @include flexRowCenter;
+                    margin: 0px 25px;
+                }
+
+            }
+        }
+    }
+
+    &-wrapper {
+        width: 60%;
+        // background-color: black;
+        height: 70%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+
+        .image-container {
+            background-color: white;
+            height: 100%;
+            width: 100%;
+        }
+
+        .slide-image {
+            object-fit: fill;
+            height: 100%;
+            width: 100%;
+        }
+
+        &-bottom-container {
+            @include flexRowSbCenter;
+            // padding: 0px 25px;
+            transform: translateY(50px) translateX(0.3px);
+            transition: .3s transform ease-in;
+            // background-color: red;
+            height: 50px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+
+            .left {
+                .icon {
+                    color: lightgray;
+                    font-size: 25px;
+                    margin: 0px 10px;
+                }
+
+                .icon:hover {
+                    color: white;
+                }
+            }
+
+            .right {
+                .icon {
+                    color: lightgray;
+                    font-size: 25px;
+                    margin: 0px 10px;
+                }
+
+                .icon:hover {
+                    color: white;
+                }
+            }
+        }
+
+        .progress-indicator-container {
+            width: 100%;
+            height: 5px;
+            position: absolute;
+            bottom: 0;
+            background-color: gray;
+
+            .slide-position-image {
+                position: absolute;
+                // background-color: red;
+                border-radius: 5px;
+                // padding: 5px;
+                // left:90%;
+                // right: 0;
+                margin: 0px 5px;
+                z-index: 2;
+                overflow: hidden;
+                bottom: 15px;
+                object-fit: fill;
+                height: 0px;
+                width: 150px;
+
+                .image {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            &-active {
+                background-color: aliceblue;
+                width: 10%;
+                height: 5px;
+            }
+        }
+
+        .progress-indicator-container:hover {
+            height: 10px;
+
+            .slide-position-image {
+                height: 100px;
+            }
+
+            .progress-indicator-container-active {
+                height: 10px;
+            }
+        }
+
+        // &.fullscreen {
+        //     @include flexRowCenter;
+        //     background-color: #212529;
+        //     border-radius: 0px;
+        //     width: 100%;
+        //     height: 100%;
+        //     position: fixed;
+        //     top: 0;
+        //     z-index: 10;
+        //     .image-container{
+        //         background-color: black;
+        //         width: 90%;
+        //     }
+        //     .slide-image{
+        //         object-fit: contain;
+        //     }
+        // }
+    }
+
+
+
+    &-wrapper:hover {
+        cursor: pointer;
+    }
+
+    &-wrapper:hover>.slider-container-wrapper-bottom-container {
+        // background-color: yellow;
+        transform: translateY(0px);
+        transition: .3s transform ease-in;
+    }
+
+
+}
+
+@include tablet {
+    .slider-container {
+        height: 60vh;
+
+        &-wrapper {
+            width: 90%;
+            height: 70%;
+
+            &-bottom-container {
+                transform: translateY(0px);
+            }
+        }
+
+        &-bottom {
+            &-container {
+                width: 95%;
+            }
+        }
+    }
+}

@@ -1,0 +1,220 @@
+
+// @import "../../App.scss";
+@import "../../App.scss";
+.footer {
+    width: 100%;
+    background-color: $--lighter;
+    &-wrapper {
+        @include flexCol;
+        padding: 40px 100px 10px;
+        @include tablet {
+            padding: 40px 40px 10px;
+            width:100%;
+        }
+        @include mobile {
+            padding: 40px 40px 10px;
+        }
+        &-top {
+            
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid lightgray;
+            padding:0px 0px 20px 0px;
+            @include tablet {
+                flex-direction: row;
+            }
+            @include mobile {
+                flex-direction: column;
+            }
+            &-column1 {
+                //background-color: red;
+                margin-top: 0;
+                width: 30%;
+                padding-bottom: 20px;
+                @include tablet {
+                    width: 100%;
+                }
+                @include mobile {
+                    width: 100%;
+                }
+                &-texts {
+                    line-height: 1.5;
+                    padding: 20px 0px 0px;
+                    font-size: 20px;
+                    word-break: keep-all;
+                    color: #525F7F;
+                   
+                }
+                &-icons {
+                    display: flex;
+                    padding-top: 10px;
+                    @include tablet {
+                        padding-bottom: 20px;
+                    }
+                    @include mobile {
+                        padding-bottom: 20px;
+                    }
+                   
+                   
+                }
+            }
+            &-column2 {
+                margin-top: 0;
+               // background-color: red;
+                width: 25%;
+                padding-bottom: 20px;
+                @include tablet {
+                    width: 100%;
+                }
+                @include mobile {
+                    width: 100%;
+                }
+                &-texts {
+                    list-style: disc;
+                    @include flexCol;
+                    // font-size: 20px;
+                    padding: 20px 0px 0px;
+                    color: #525F7F;
+                    margin-left: 30px;
+                    font-family: 'Roboto', sans-serif;
+                    font-size: 16px;
+                    font-weight: 400;
+                    // font-weight: 500;//can change to 400
+                    color: #525F7F;
+                    line-height: 1.4;
+                }
+                &-appIcon{
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap:wrap;
+                    padding-top: 15px;
+                    .applist{
+                    padding: 5px;
+                   
+                        width: 25%;
+
+                       
+                    }
+                }
+            }
+            &-column3 {
+                @include flexColStartStart;
+                //  background-color: red;
+                margin-top: 0;
+                width: 30%;
+                padding:0px,0px,20px;
+                
+                text-align: left;
+                @include tablet {
+                    width: 100%;
+                }
+               
+                .button {
+                    width: fit-content;
+                    margin-top: 20px;
+                    //float: ;
+                }
+                @include tablet {
+                    width: 100%;
+                    text-align: left;
+                    .button {
+                        width: 100%;
+                        // background-color: red;
+                        margin-top: 20px;
+                        // float: right;
+                    }
+                }
+                @include mobile {
+                    width: 100%;
+                    text-align: left;
+                    .button {
+                        width: 100%;
+                        // background-color: red;
+                        margin-top: 20px;
+                        // float: right;
+                    }
+                }
+                &-texts {
+                    padding: 20px 0;
+                    list-style: none;
+                    line-height: 1.5;
+                    margin-top: 0;
+                    @include flexCol;
+                    font-size: 20px;
+                    //text-align: right;
+                    word-break: normal;
+                    @include tablet {
+                        text-align: left;
+                    }
+                    @include mobile {
+                        text-align: left;
+                    }
+                }
+                &-btn{
+                    // margin-top: 10px;
+                }
+            }
+        }
+        &-bottom {
+            margin: 0;
+            display: flex;
+            padding-top: 10px;
+            padding-right: 0;
+            flex-direction: row-reverse;
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #525F7F;
+            width: auto;
+           
+           @include mobile{
+               flex-direction: row-reverse;
+               justify-content: space-between;
+           }
+
+            &-copyright{
+                width:auto;
+              // word-wrap: nowrap;
+              
+               
+                p {
+                    
+                   // width: auto;
+                     text-align: left;
+                   
+                }
+                span {
+                       display: inline;
+                    color: $--primary;
+                    cursor: pointer;
+                    
+                }
+
+            }
+           
+            &-links {
+                margin: 0;
+                display: flex;
+                color: #525F7F;
+                flex-direction: row-reverse;
+                align-items: center;
+                @include mobile{
+                    flex-direction: column-reverse;
+                    line-height: 1.5;
+                    align-items: flex-start;
+
+                }
+                li {
+                    margin: 0;
+                    padding-right: 50px;
+                    width: auto;
+                    list-style: none;
+                    cursor: pointer;
+                   
+                    
+                    //line-height: 1.4;
+                }
+            }
+        }
+    }
+}

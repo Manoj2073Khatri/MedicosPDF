@@ -1,0 +1,30 @@
+@import "../../../../App.scss";
+
+.subcatagories{
+    @include flexColCenterStart;
+    width: 100%;
+    // padding: 0px 50px;
+    // background-color: red;
+    .title{
+        padding: 0px 0px;
+       border-bottom: 3px solid $--primary;
+    }
+   &-items{
+       text-align: left;
+       width: 70%;
+    //    background-color: red;
+       &-topic{
+           font-weight: 500;
+           color: #808080;
+           font-size: 16px;
+           line-height: 2.5;
+           cursor: pointer;
+           &.active{
+               color: #1D264F;
+               font-size: 18px;
+
+           }
+       }
+   }
+   
+}
